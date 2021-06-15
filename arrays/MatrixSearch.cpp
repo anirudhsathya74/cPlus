@@ -7,14 +7,16 @@ int main(){
 
     int target=9;
 
-    int a[n][m]={{1,2,3},{4,5,6},{7,8,9}};
+    int a[n][m]={{1,2,3}
+                ,{4,5,6}
+                ,{7,8,9}};
 
-   int r=0,c=n-1;
-   bool found=false;
+   int r=0,c=m-1;
    
-   while(r<m and c>=0){
+   while(r<n and c>=0){
        if(a[r][c]==target){
-           found=true;
+           cout<<"Found at "<<r<<","<<c<<endl;
+           return 1;
        }
        else if(a[r][c]>target){
            c--;
@@ -23,10 +25,5 @@ int main(){
            r++;           
        }
    }
-
-   if(found)
-        cout<<"Ele found";
-   else
-        cout<<"Ele not found";
    return 0;
 }
