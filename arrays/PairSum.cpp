@@ -8,6 +8,7 @@ int pairsum(int a[],int n,int k){
         currsum=a[low]+a[high];
         if(currsum==k){
             cout<<"a["<<low<<"] - "<<a[low]<<endl<<"a["<<high<<"] - "<<a[high]<<endl;
+            cout<<"["<<low<<","<<high<<"]";
             return true;
         }
         else if(currsum<k){
@@ -21,8 +22,9 @@ int pairsum(int a[],int n,int k){
 }
 
 int main(){
-    int k=40;
+    int k=6;
     int a[]={2,4,7,11,16,20,21};
     cout<<pairsum(a,8,k)<<endl;
+    
     return 0;
 }
